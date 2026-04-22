@@ -49,8 +49,8 @@
             margin: 0 auto;
             width: 50%;
         }
-
         .list {
-            width: 65%;
-            list-style: none;
+            /* width: 65%; */
+            /* list-style: none; */
+            list-style-type: none;
         }
