@@ -25,6 +25,7 @@ console.log(result)
 
 result = one + two; // output => 3
 console.log(result)
+
 // typeof result;
 // console.log(typeof result)
 
