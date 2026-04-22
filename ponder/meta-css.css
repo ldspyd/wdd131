@@ -1,0 +1,34 @@
+        body {
+            /* background-color: lightgray; */
+            background-color: #ddd;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        img {
+            width: 55%;
+            display: flex;
+        }
+        #content {
+            border: 0.5px solid rgb(197, 197, 197);
+            justify-items: center;
+            justify-self: center;
+            width: 40%;
+            padding: 50px 10px 50px 10px;
+        }
+        #content p {
+            /* font-size: large; */
+            color: rgb(41, 107, 169);
+        }
+        #content hr {
+            width: 80%;
+            height: 2px;
+            background-color: rgb(41, 107, 169);
+            margin: 20px 0px 20px 0px;
+        }
+        #topics {
+            justify-items: center;
+        }
+        .list {
+            width: 65%;
+            list-style: none;
+        }
