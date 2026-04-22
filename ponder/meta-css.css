@@ -27,7 +27,7 @@
         #content hr {
             /* height: 2px; */
             /* background-color: rgb(41, 107, 169); */
-            margin: 20px 0px 20px 0px;
+            /* margin: 20px 0px 20px 0px; */
             
             height: 3px;
             width: 80%;
@@ -38,6 +38,7 @@
         }
         #topics {
             /* justify-items: center; */
+            
             width: 55%;
             margin: 0 auto;
             line-height: 1.5em;
@@ -45,6 +46,7 @@
         img {
             /* width: 55%; */
             /* display: flex; */
+
             display: block;
             margin: 0 auto;
             width: 50%;
@@ -52,5 +54,6 @@
         .list {
             /* width: 65%; */
             /* list-style: none; */
+
             list-style-type: none;
         }
