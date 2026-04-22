@@ -40,12 +40,16 @@
             /* justify-items: center; */
             width: 55%;
             margin: 0 auto;
+            line-height: 1.5em;
+        }
+        img {
+            /* width: 55%; */
+            /* display: flex; */
+            display: block;
+            margin: 0 auto;
+            width: 50%;
         }
 
-        img {
-            width: 55%;
-            display: flex;
-        }
         .list {
             width: 65%;
             list-style: none;
