@@ -23,9 +23,9 @@ const two = 2;
 let result = one * two; // output => 2
 console.log(result)
 
-result = one + two; // output => 12
-// typeof result;
+result = one + two; // output => 3
 console.log(result)
+// typeof result;
 // console.log(typeof result)
 
 
