@@ -23,10 +23,19 @@ paragraph.classList.add('background');
 const image = document.querySelector('img');
 image.setAttribute('src', 'images/Web_Page_components.png');
 
+// dropdown.addEventListener('change',)
+// let selectElem = document.getElementById('webdevlist');
 
-let selectElem = document.getElementById('webdevlist');
-selectElem.addEventListener('change', function(){
-    let codeValue = selectElem.value;
+const html = document.querySelector('#html');
+const css = document.querySelector('#css');
+const js = document.querySelector('#js');
+
+const dropdown = document.querySelector('#webdevlist');
+dropdown.addEventListener('change', function () {
+    html.style.color = 'purple'
+    css.style.color = 'purple'
+    js.style.color = 'purple'
+    let codeValue = dropdown.value;
     console.log(codeValue);
-})
-                
+    document.getElementById(codeValue).style.color = 'red';
+});
