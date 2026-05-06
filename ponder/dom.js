@@ -5,6 +5,11 @@ title.textContent = 'Web Page Components';
 
 // document.querySelector('#topics').style.color = 'red';
 
+title.addEventListener('click',function() {
+    title.classList.toggle('highlight');
+});
+
+
 const topics = document.querySelector('#topics');
 topics.style.color = 'purple';
 
