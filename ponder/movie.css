@@ -52,7 +52,21 @@ header, footer {
 }
 
 @media (min-width: 600px) {
-    
-
+    .main-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        margin: 0 auto;
+        width: 35%;
+    }
+    .movie {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+    .movie img {
+        grid-column: 1 / 2;
+        grid-row: 1 / 6;
+    }
 }
           
