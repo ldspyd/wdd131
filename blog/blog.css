@@ -16,11 +16,15 @@ main {
     padding-bottom: 1rem;
     /* padding: 1rem; */
 }
+nav {
+    justify-items: end;
+}
 .main-nav {
     list-style: none;
     padding: 0;
     text-align: right;
     max-width: 300px;
+    margin-right: 3%;
 }
 .main-nav li {
     display: inline;
