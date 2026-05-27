@@ -48,11 +48,14 @@ const movie = [
 let movieList = document.querySelector('#movie-list');
 
 
-    movie.forEach(movie => {
+movie.forEach(movie => {
+
+        const article = document.createElement('article');
+        article.className = 'movie';
 
         // Code for going through each movie and creating content for that movie
     
-        let html = `<article class="movie">
+        let html = `
               <h2>${movie.title}</h2>
               <img src=${movie.imgSrc} alt=${movie.imgAlt}>
               <p><strong>Release Date:</strong> ${movie.date}</p>
@@ -60,10 +63,10 @@ let movieList = document.querySelector('#movie-list');
               <p><strong>Genre:</strong> ${movie.genre}</p>
               <p><strong>Rating:</strong> <img aria-label="${movie.stars.length} out of 5 stars">${movie.stars}</img></p>
               <p id='desc'>${movie.description}</p>
-            </article>`
+            `
         
-        movieList.innerHTML += html;
-
+        article.innerHTML = html;
+        movieList.appendChild(article);
     
     });
           
