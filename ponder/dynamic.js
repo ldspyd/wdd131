@@ -29,3 +29,20 @@ student.forEach(function(item){
     name.innerHTML = html;
     container.appendChild(name);
 })
+
+
+// Literal
+const pets = ['cat', 'dog', 'bird']
+
+
+
+// constructor
+const animals = new Array['bear', 'lion']
+
+pets.push('lizard');
+
+console.log(pets);
+
+console.log(pets[0]);
+
+pets[3] = 'bunny'
