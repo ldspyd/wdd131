@@ -21,7 +21,7 @@ function listTemplate(item) {
 
 myList.innerHTML = stepsHtml.join('');
 
-let grades = ['A', 'B', 'C'];
+let grades = ['B', 'C', 'C'];
 let points;
 
 let gpaPoints = grades.map(convert);
