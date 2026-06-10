@@ -1,56 +1,66 @@
 const aCourse = {
-    code: 'CSE121b',
-    name: 'Javascript Language',
-    logo: 'images/js-logo.png',
+    // code: 'CSE121b',
+    name: 'Snortleblat',
+    image: 'images/snortleblat.webp',
 
     sections: [
-        { sectionNum: 1, roomNum: 'STC 353', enrolled: 26, days: 'TTh', instructor: 'Bro T' },
-        { sectionNum: 2, roomNum: 'STC 347', enrolled: 28, days: 'TTh', instructor: 'Sis A' }
+        { classname: 'Swamp Beast Diplomat', level: 1, health: 100 }
+        // { classname: 2, level: 'STC 347', health: 28, days: 'TTh', instructor: 'Sis A' }
     ],
 
-    enrollStudent: function (sectionNum) {
+    enrollStudent: function () {
         // find the right section...Array.findIndex will work here
-        const sectionIndex = this.sections.findIndex(
-            (section) => section.sectionNum == sectionNum
-        );
-        if (sectionIndex >= 0) {
-            this.sections[sectionIndex].enrolled++;
+        // const sectionIndex = this.sections.findIndex(
+        //     (section) => section.health == health
+        // );
+        if (this.sections[0].health >= 1) {
+            this.sections[0].health -= 20;
             renderSections(this.sections);
+        } else {
+            alert('The character is dead')
         }
     }
 };
 
 function sectionTemplate(section) {
-    return `<tr>
-    <td>${section.sectionNum}</td>
-    <td>${section.roomNum}</td>
-    <td>${section.enrolled}</td>
-    <td>${section.days}</td>
-      <td>${section.instructor}</td></tr>`
+    return `
+    <p><strong>Class:</strong> ${section.classname}</p>
+    <p><strong>Level:</strong> ${section.level}</p>
+    <p><strong>Health:</strong> ${section.health}</p>`
 }
+
+// <td>${section.days}</td>
+//   <td>${section.instructor}</td>
 
 function renderSections(sections) {
     const html = sections.map(sectionTemplate);
-    document.querySelector("#sections").innerHTML = html.join("");
+    document.querySelector(".stats").innerHTML = html.join("");
 }
 
 renderSections(aCourse.sections);
 
-document.querySelector("#enrollStudent").addEventListener("click", function () {
-    const sectionNum = document.querySelector("#sectionNumber").value;
-    aCourse.enrollStudent(sectionNum);
+
+document.querySelector("#attacked").addEventListener("click", function () {
+    // const health = aCourse.sections[0].health;
+    aCourse.enrollStudent();
+});
+
+document.querySelector("#levelup").addEventListener("click", function () {
+    // const health = aCourse.sections[0].health;
+    aCourse.sections[0].level++;
+    renderSections(aCourse.sections);
 });
 
 
-document.querySelector('#courseName').textContent = aCourse.name;
-document.querySelector('#courseCode').textContent = aCourse.code;
+document.querySelector('.name').textContent = aCourse.name;
+// document.querySelector('#courseCode').textContent = aCourse.code;
 
 
-document.querySelector('img').setAttribute('src', aCourse.logo);
+document.querySelector('img').setAttribute('src', aCourse.image);
 document.querySelector('img').setAttribute('alt', aCourse.name);
-document.querySelector('img').style.width = '100px';
+// document.querySelector('img').style.width = '100px';
 
 
-console.log(aCourse.sections);
+// console.log(aCourse.sections);
 
 
