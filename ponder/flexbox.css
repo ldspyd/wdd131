@@ -41,6 +41,15 @@ hr{
     display: none;
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery section {
+    flex: 1 1 460px;
+}
+
 @media screen and (min-width: 550px) {
     .main-nav {
         justify-content: end;
