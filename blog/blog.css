@@ -116,9 +116,9 @@ nav {
         background-color: #ffc107;
         margin: 0px;
         padding: 0px;
-        /* border: none; */
         display: flex;
         justify-self: center;
+        /* border: none; */
 
     }
 }

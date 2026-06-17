@@ -1,15 +1,25 @@
 #title-line {
     display: flex;
     align-items: end;
-
+    margin: 3%;
+    justify-self: center;
+    justify-content: center;
+    max-height: 150px;
 }
 
 #title-line img {
-    height: 200px;
+    flex: 1 1 50%;
+    max-height: 150px;
+    width: 30%;
 }
 
 #title-line h1 {
-    font-size: 4em;
+    /* max-block-size: 150px; */
+    /* font-size: 7vw; */
+    flex: 1 1 70%;
+    text-align: end;
+    margin: 0;
+    min-width: 0;
 }
 
 #search-bar {
@@ -17,6 +27,8 @@
     border: 2px solid black;
     border-radius: 5px;
     justify-content: end;
+    padding: 3px;
+    margin: 3%;
 }
 
 #search-button {
@@ -26,9 +38,113 @@
 #search-input {
     height: 50px;
     width: 100%;
+    border: none;
+}
+
+.horizontal {
+    width: 1px;
+    height: 45px;
+    background-color: gray;
+    margin: 2.5px;
+    padding: 0px;
+    display: flex;
+    justify-self: center;
 }
 
 #search-bar img {
     height: 50px;
     justify-self: end;
+}
+
+hr {
+    margin: 3%;
+}
+
+.recipe-card {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 4%;
+    margin: 3%;
+    flex-direction: column;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 10px;
+}
+
+.recipe-category {
+    font-size: 1.5em;
+    height: auto;
+    width: 100px;
+    flex: 1 1;
+    text-align: center;
+}
+
+.recipe-card img {
+    flex: 1 1 50%;
+    height: auto;
+    min-width: 0;
+}
+
+.recipe-card #recipe-description {
+    display: none;
+}
+
+.recipe-card .recipe-name {
+    color: rgb(0, 157, 255);
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
+
+.social div {
+    width: 60%;
+    text-align: center;
+}
+
+.social img {
+    width: 35px;
+}
+
+.recipe-card div {
+    flex: 1 1 50%;
+    min-width: 0;
+}
+
+
+@media screen and (min-width: 550px) {
+    .recipe-card img {
+        flex: 1 1 50%;
+        max-width: 50%;
+        width: auto;
+    }
+    .recipe-card #recipe-description {
+    display: inline;
+    }
+    .recipe-card {
+        flex-direction: row;
+    }
+    .recipe-card div {
+        flex: 1 1 50%;
+        min-width: 0;
+    }
+    .social {
+        flex-direction: row;
+    }
+    .social div {
+        width: 50%;
+    }
+    .social #icons {
+        display: flex;
+        justify-content: end;
+    }
+    .social #link {
+        display: flex;
+        justify-content: start;
+    }
 }
