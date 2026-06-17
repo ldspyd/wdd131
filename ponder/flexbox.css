@@ -19,8 +19,8 @@ list-style-type: none;
 display: flex;
 flex-direction: column;
 gap: 2em;
-/* background-color: bisque;
-height: 100px; */
+background-color: bisque;
+/*height: 100px; */
 align-items: center;
 /* justify-content: end; */
 /* padding-right: 50px; */
