@@ -32,16 +32,18 @@
 </head>
 
 <body>
-    <div id="title-line">
-        <img src="images/recipe-book.png" alt="recipe image">
+    <header id="title-line">
+        <img src="images/recipe-book.png" alt="recipe book logo">
         <h1>RECIPEBOOK</h1>
-    </div>
-    <div id="search-bar">
-        <input id="search-input">
+    </header>
+    <section role="search" id="search-bar">
+        <input type="search" id="search-input" placeholder="EX: Apple Crisp">
         <hr class="horizontal">
-        <button id="search-button"><img src="images/search.svg" alt="search icon"></button>
+        <button id="search-button" aria-label="Submit search">
+            <img src="images/search.svg" alt="search icon">
+        </button>
         <!-- <img src="images/search.svg" alt="search icon"> -->
-    </div>
+    </section>
     
     <hr>
 
