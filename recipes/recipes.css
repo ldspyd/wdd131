@@ -72,11 +72,22 @@ hr {
 }
 
 .recipe-category {
+    /* display: flex; */
+    /* gap: 5px;
+    flex-wrap: wrap; */
+    margin-bottom: 10px;
+}
+.recipe-category {
     font-size: 1.5em;
     height: auto;
-    width: 100px;
+    width: auto;
     flex: 1 1;
     text-align: center;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
 }
 
 .recipe-card img {

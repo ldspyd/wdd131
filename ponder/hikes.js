@@ -171,4 +171,4 @@ function init() {
   renderHike(hikes[randomNum]);
 }
 
-init();
+init(); 

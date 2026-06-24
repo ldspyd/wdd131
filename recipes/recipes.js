@@ -282,3 +282,98 @@ const recipes = [
 ]            
                     
 
+let recipeContainer = document.querySelector('#recipe-container')
+let button = document.querySelector('#search-button')
+let input = document.querySelector('#search-input')
+
+function search() {
+	button.addEventListener('click', search);
+  let hikeQuery = input.value;
+  let filteredHikes = recipes.filter(function (hike) {
+    return (
+      hike.name.toLowerCase().includes(hikeQuery.toLowerCase()) ||
+      hike.description.toLocaleLowerCase().includes(hikeQuery.toLowerCase()) ||
+      hike.tags.find(tag => tag.toLowerCase().includes(hikeQuery.toLowerCase()))
+    );
+  })
+
+  console.log(filteredHikes);
+
+  let sortedHikes = filteredHikes.sort(compareHikes);
+
+  function compareHikes(a, b) {
+    if (a.rating < b.rating) {
+      return -1;
+    } else if (a.rating > b.rating) {
+      return 1;
+    }
+    return 0;
+  }
+  console.log(sortedHikes);
+  // let sortedHikes = filteredHikes.sort(compareHikes);
+
+  // clear out any previous content
+  recipeContainer.innerHTML = '';
+  // output onto screen
+  sortedHikes.forEach(function (hike) {
+    renderHike(hike);
+  })
+}
+
+
+
+
+/* for the enter key to work on search - not just clicking the search button */
+input.addEventListener('keypress', handleEnter);
+function handleEnter(event) {
+  if (event.key === 'Enter') {
+    search();
+  }
+}
+
+let randomNum = Math.floor(Math.random() * recipes.length);
+console.log(randomNum);
+
+function tagTemplate(tags) {
+  return tags.map((tag) => `<button class="recipe-category">${tag}</button>`).join(' ');
+}
+
+function difficultyTemplate(rating) {
+  let html = `<span
+	class="icon-star"
+	role="img"
+	aria-label="Rating: ${rating} out of 5 stars"`
+  for (let i = 1; i <= 5; i++) {
+    if (i <= rating) {
+      html += `<span aria-hidden="true" class="icon-boot"> ⭐ </span>`
+    } else {
+      html += `<span aria-hidden="true" class="icon-empty"> ☆ </span>`
+    }
+  }
+  html += `</span>`
+  return html
+}
+
+function hikesTemplate(recipe) {
+  return `<div class="recipe-card">
+  <img src="${recipe.image}">
+  <div>
+    <div class="recipe-category-container">${tagTemplate(recipe.tags)}</div>
+	<h3 class="recipe-name">${recipe.name}</h3>
+    <p>${difficultyTemplate(recipe.rating)}</p>
+    <p>${recipe.description}</p>
+  </div>
+  </div>
+`
+}
+
+function renderHike(hike) {
+  let html = hikesTemplate(hike);
+  recipeContainer.innerHTML += html
+}
+
+function init() {
+  renderHike(recipes[randomNum]);
+}
+
+init(); 
