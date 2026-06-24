@@ -93,7 +93,7 @@ function search() {
 
   console.log(filteredHikes);
 
-  let sortedHikes = filteredHikes.sort(compareHike);
+  let sortedHikes = filteredHikes.sort(compareHikes);
 
   function compareHikes(a, b) {
     if (a.difficulty < b.difficulty) {
@@ -104,7 +104,14 @@ function search() {
     return 0;
   }
   console.log(sortedHikes);
-  
+  // let sortedHikes = filteredHikes.sort(compareHikes);
+
+  // clear out any previous content
+  hikeContainer.innerHTML = '';
+  // output onto screen
+  sortedHikes.forEach(function (hike) {
+    renderHike(hike);
+  })
 }
 
 
