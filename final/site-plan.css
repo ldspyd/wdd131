@@ -30,6 +30,11 @@ Fonts are separated by a | */
   --nav-hover-background-color: var(--primary-color);
 }
 
+main img {
+    width: 70%;
+
+}
+
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
 body {
@@ -41,7 +46,6 @@ body {
 img {
   display: block;
   margin: 0 auto;
-  width: 70%;
 }
 h1,
 h2,
