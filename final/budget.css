@@ -1,5 +1,82 @@
 
 
-header nav img {
-    width: 10%;
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 1%;
+}
+
+header #headline {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 8% 1fr 8%;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+header #headline #logo {
+    width: 100%;
+    height: auto;
+}
+
+header #headline h1 {
+    text-align: center;
+}
+
+header nav {
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    margin: 1%;
+}
+
+main #top {
+    display: flex;
+    gap: 1rem;
+}
+
+main #top #trend-area {
+    width: 70%;
+}
+
+main #top #receipt-form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 0.5rem;
+} 
+
+main #receipt-container {
+    width: 98%;
+    border: 2px solid black;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    gap: 0.5rem;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+main #receipt-container .receipt {
+    width: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+footer {
+    margin: 1%;
+}
+
+hr {
+    margin: 1%;
+}
+
+header hr {
+    margin: 0;
 }
