@@ -10,8 +10,8 @@ function receiptTemplate(receipt) {
                 <h3>Date: </h3> <p>${receipt.date}</p>
                 <h3>Amount: </h3> <p>$ ${receipt.amount}</p>
             </div>
+
             <hr class="dividor">
-    
     `
 }
 
@@ -88,6 +88,27 @@ function mostFrequentCategory() {
     return mostFrequent;
 }
 
+let face = document.createElement('img')
+let faceSource;
+document.querySelector('#trend-area').appendChild(face)
+face.src = 'images/happy_face.jpg'
+face.className = 'face'
+
+function faces(averageValue) {
+    if (averageValue < 15) {
+        faceSource = 'images/happy_face.jpg'
+        face.alt = 'Happy face'
+    } else if (averageValue >= 15 && averageValue < 20) {
+        faceSource = 'images/meduim_face.jpg'
+        face.alt = 'Medium face'
+    } else {
+        faceSource = 'images/sad_face.jpg'
+        face.alt = 'Sad face'
+    }
+
+    face.src = faceSource
+}
+
 function trend() {
 
     document.querySelector("#average").textContent =
@@ -98,8 +119,8 @@ function trend() {
         `Most frequent category: ${mostFrequentCategory()}`;
     document.querySelector("#total").textContent =
         `Total amount: $${totalAmount().toFixed(2)}`;
+    faces(averageAmount().toFixed(2))
 
 }
-
 
 receiptInput();
