@@ -91,18 +91,20 @@ function mostFrequentCategory() {
 let face = document.createElement('img')
 let faceSource;
 document.querySelector('#trend-area').appendChild(face)
-face.src = 'images/happy_face.jpg'
+face.src = 'images/happy_face.png'
 face.className = 'face'
+face.alt = 'Happy face'
 
 function faces(averageValue) {
     if (averageValue < 15) {
-        faceSource = 'images/happy_face.jpg'
+        faceSource = 'images/happy_face.png'
         face.alt = 'Happy face'
-    } else if (averageValue >= 15 && averageValue < 20) {
-        faceSource = 'images/meduim_face.jpg'
+    } else if (averageValue >= 15 && averageValue < 30) {
+        // console.log('medium')
+        faceSource = 'images/medium_face.png'
         face.alt = 'Medium face'
     } else {
-        faceSource = 'images/sad_face.jpg'
+        faceSource = 'images/sad_face.png'
         face.alt = 'Sad face'
     }
 
