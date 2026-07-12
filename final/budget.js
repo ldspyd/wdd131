@@ -31,7 +31,7 @@ function receiptInput() {
         let amountValue = Number(document.getElementById('amount').value);
 
         let receipt = {
-            category: categoryValue,
+            category: categoryValue.toLowerCase(),
             date: dateValue,
             amount: amountValue
         }
