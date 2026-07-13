@@ -91,7 +91,8 @@ main #receipt-container {
     gap: 0.5rem;
     padding-left: 1%;
     padding-right: 1%;
-    background-color: #387C6C;
+    background-color: #1C3F3A;
+    color:#A9D1C8;
 }
 
 main #receipt-container .receipt {
@@ -105,8 +106,13 @@ main #receipt-container .receipt {
 
 footer {
     margin: 1%;
-    background-color: #1C3F3A;
-    color: #A9D1C8;
+    padding: 0.1%;
+    /* background-color: #1C3F3A; */
+    color: #1C3F3A;
+}
+
+footer p {
+    margin: 1%;
 }
 
 hr {
@@ -124,7 +130,11 @@ header hr {
 
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
+    body {
+        width: 60%;
+        margin:auto;
+    }
     main #receipt-container {
         flex-direction: row;
     }
